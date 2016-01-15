@@ -1,0 +1,462 @@
+* {
+  box-sizing: border-box; }
+
+html, body, p {
+  margin: 0;
+  padding: 0; }
+
+.loading {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 90000;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  transition: 0.7s linear all;
+  line-height: 5em;
+  opacity: 0.95;
+  }
+  .loading.ng-hide {
+      opacity: 0;
+  }
+
+  .loading i {
+    position: relative;
+    color: white;
+  }
+
+/*.bg-vid {
+  position: fixed;
+  width: 200vw;
+  height: 200vh;
+  top: inherit;
+  left: inherit;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  z-index: -100;
+}*/
+
+/*body-wrap{
+  position: absolute;
+}*/
+
+.intro-vid{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 399;
+}
+.intro-vid__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.intro-hider {
+  font-family: 'Permanent Marker', cursive;
+  text-shadow: 3px 3px 0px #000;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 3px;
+  text-transform: uppercase;
+  position: fixed;
+  font-size: 20px;
+  top: 50vh;
+  right: 46vw;
+  z-index: 400;
+}
+.intro-hider:hover{
+  border: 2px solid rgba(144, 144, 144, .5);
+  transition: all 0.2s ease-out 0s;
+}
+.my-picture{
+  position: fixed;
+  top: 30vh;
+  right: 70vw;
+  width: 20vw;
+  height: 40vh;
+  z-index: 400;
+  border-radius: 8px;
+
+}
+.intro-text{
+  position: fixed;
+  top: 40vh;
+  right: 20vw;
+  width: 20vw;
+  height: 40vh;
+  z-index: 400;
+font-family: 'Yanone Kaffeesatz', sans-serif;  font-size: 40px;
+  font-weight:900;
+  text-shadow: 0px 0px 2px #000;
+  color: white;
+
+
+
+}
+.bg-home {
+  overflow: hidden;
+}
+.bg-img {
+  position: absolute;
+  /*top: 20vh;*/
+  /*left: -10vh;
+  right: 110vh;*/
+  /*bottom: -180vh;*/
+  width: 200vw;
+  height: 200vh;
+  z-index: -50;
+  opacity: 0.95;
+  overflow: hidden;
+}
+
+/*.bg-vid{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.bg-vid__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}*/
+.about-me {
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100vw;
+  top: 40vh;
+  /*left: vw;*/
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  text-shadow: 0px 0px 2px #000;
+  text-align: center;
+  color: black;
+  font-size: 5vw;
+
+}
+/*STUFF*/
+.top-menu-filler {
+  width: 100vw;
+  height: 10vh;
+}
+
+.top-menu {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 10vh;
+  background: rgba(255, 255, 255, 0.44);
+  color: white;
+  font-family: 'Permanent Marker', cursive;
+  z-index: 350;
+}
+.scrollUp {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 30vw;
+  font-size: 1.7em;
+  left: 4vw;
+  text-shadow: 1px 0px 0px black;
+}
+.scrollUp a {
+  text-decoration: none;
+}
+.scrollUp a:visited {
+  color: white;
+  outline: 0;
+}
+.scrollUp a:hover {
+  color:rgb(210, 210, 210);
+}
+.scrollUp a i {
+  font-size: 75px;
+}
+.menuChoices {
+  position: relative;
+  font-size: 20px;
+  width: 55vw;
+  display: flex;
+  flex-direction: row;
+  right: 7vw;
+  align-items: center;
+  /*border: 2px solid blue;*/
+  text-align: right;
+  color: white;
+}
+.menuChoices a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  flex-grow: 1;
+  border: 2px solid tranparent;
+  align-content: stretch;
+  width: 1vw;
+  /*height: 6vh;*/
+  justify-content: center;
+  color: black;
+  border-radius: 5px;
+}
+.menuChoices a:hover {
+  color: rgb(74, 73, 70);
+  background-color: #D0D0D0;
+  transition: all 0.4s ease-out 0s;
+}
+.menuChoices a:focus {
+  outline: 0;
+  border-bottom: 3px solid #D0D0D0;
+}
+.page1 {
+  position: relative;
+  max-width: 80vw;
+  background-color: black;
+}
+
+
+/*ROUTING CSS*/
+
+.my-thoughts-bg {
+  position: absolute;
+  display: flex
+  flex-flow: column;
+  justify-content: center;
+  width: 100vw;
+  height: 200vh;
+  background: url("http://www.turbonigeria.com/wp-content/uploads/2015/02/portfolioBG.jpg") no-repeat center center fixed;
+  opacity: .80;
+  align-items: center;
+  background-size: cover;
+  overflow-y: scroll;
+
+}
+.posts-toggle{
+  align-content: center;
+  width: 80vw;
+  height:180vh;
+  color: white;
+  margin: 0 auto;
+  background-color: black;
+  opacity: .80;
+  text-align: center;
+
+}
+.thought-comments h3 {
+  font-family: 'Permanent Marker', cursive;
+  cursor:pointer;
+}
+.thought-comments p {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 20px;
+}
+
+.my-portfolio-bg {
+  position: absolute;
+  width: 100vw;
+  height: 110vh;
+  background: url("https://images.unsplash.com/photo-1436407886995-41f8f5ee43ad?crop=entropy&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375") no-repeat center center fixed;
+  opacity: .90;
+  background-size: cover;
+}
+
+.my-skills-bg {
+  position: absolute;
+  width: 100vw;
+  height: 150vh;
+  background: url("https://images.unsplash.com/photo-1433832597046-4f10e10ac764?crop=entropy&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1375") no-repeat center center;
+  opacity: .90;
+  overflow: scroll;
+  background-size: cover;
+}
+
+.call-me-bg {
+  position: absolute;
+  width: 100vw;
+  height: 110vh;
+  background: url("https://images.unsplash.com/uploads/1413222992504f1b734a6/1928e537?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=dbe6b61539533a8af049da52335250b3") no-repeat center center fixed;
+  opacity: .90;
+  background-size: cover;
+}
+
+
+
+
+/*.slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide.ng-enter,
+.slide.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.slide.ng-enter {
+    left: 100%;
+}
+.slide.ng-enter-active {
+    left: 0;
+}
+.slide.ng-leave {
+    left: 0;
+}
+.slide.ng-leave-active {
+    left: -100%;
+}*/
+
+.ui-view-container{
+  position:relative;
+  height:65px;
+}
+
+[ui-view]  {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+[ui-view].ng-enter,
+[ui-view].ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+[ui-view].ng-enter {
+    left: 100%;
+}
+[ui-view].ng-enter-active {
+    left: 0;
+}
+[ui-view].ng-leave {
+    left: 0;
+}
+[ui-view].ng-leave-active {
+    left: -100%;
+}
+
+/*call me*/
+
+/* Below line is write to use Google font online */
+/*@import "http://fonts.googleapis.com/css?family=Ubuntu";*/
+.contact-wrapper{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  /*align-self: center;*/
+}
+div#main{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+width:830px;
+height:650px;
+margin:0 auto;
+font-family: 'Permanent Marker', cursive;
+text-shadow: 1px 0px 0px black;
+}
+div#form_sample{
+  align-self: center;
+text-align:center;
+border:1px solid #ccc;
+width:300px;
+padding:0 50px 15px;
+margin-top:20px;
+box-shadow:0 0 15px;
+border-radius:6px;
+background: rgba(255, 255, 255, 0.44);
+}
+#main h1{
+margin-top:40px
+}
+hr{
+margin-top:-5px
+}
+label{
+/*float:left;*/
+font-size:16px
+}
+input[type="text"]{
+width:100%;
+margin-top:10px;
+height:35px;
+margin-bottom:25px;
+padding:10px;
+border:3px solid #909090;
+}
+textarea{
+width:100%;
+border:3px solid #909090;
+padding:10px;
+margin-bottom:25px;
+margin-top:10px;
+height:100px;
+resize:none
+}
+input[type="submit"]{
+width:100%;
+padding:10px 45px;
+background-color:#909090;
+border:none;
+color: black;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+font-family: 'Permanent Marker', cursive;
+text-shadow: 1px 0px 0px black;
+}
+#main input[type="submit"]:hover {
+  color: #909090;
+  background-color: black;
+  border-left: 2px solid rgba(255, 255, 255, 0.44);
+  border-top: 2px solid rgba(255, 255, 255, 0.44);
+  transition: all 0.2s ease-out 0s;
+}
+/* -------------------------------------
+CSS for Sidebar (optional)
+---------------------------------------- */
+/*div#fugo{
+  float:right
+}*/
+
+.link-buttons{
+  width: 100vw;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  /*align-self: center;*/
+  width: 100vw;
+}
+.link-buttons a:hover{
+  border-top: 2px solid #909090;
+  border-left: 2px solid #909090;
+
+}

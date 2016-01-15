@@ -1,0 +1,15 @@
+<div class = "top-menu-filler">
+<div class = "top-menu-filler"></div>
+<input type="text"  ng-model="post.title" placeholder="title here">
+<input type="text"  ng-model="post.text" placeholder="text here">
+<button type="button" ng-click="addPost()">Add Post</button>
+</br>
+</br>
+<div ng-repeat="post in posts track by $index">
+  <h3>
+    {{post.title}}<button type="button" ng-click="deletePost($index)">Delete Post</button>
+  </h3>
+  <p>
+    {{post.text}}
+  </p>
+</div>
